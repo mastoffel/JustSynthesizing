@@ -1,6 +1,6 @@
 ## Meta-Analysis Agent
 
-### 1. Refine user'sresearch question
+### 1. Refine user's research question
 
 Many questions will be too vague or difficult to study using a meta-analysis.
 In this step, the agent will help the user to make the research question specific and feasible. We need to be clear about:

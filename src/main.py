@@ -1,20 +1,20 @@
-import anthropic
-import os
 from dotenv import load_dotenv
+from anthropic import Anthropic
 
 load_dotenv()
 
-client = anthropic.Anthropic()
+client = Anthropic()
 
 message = client.messages.create(
     model="claude-3-haiku-20240307",
-    max_tokens=4096,
+    max_tokens=1000,
     messages=[
-        {"role": "user", "content": "Translate Heinrich Heine's poem 'Die Lorelei' to English."}
+        {"role": "user", "content": "Translate the poem Mondnacht to English."}
     ]
 )
 
 # run main
 if __name__ == "__main__":
-    print(message.content)
+    # content contains the actual text
+    print(message.content[0].text)
 
